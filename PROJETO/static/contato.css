@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Fonte moderna e sofisticada */
+    background: linear-gradient( to bottom, #1a1a1a, #4a4a4a); /* Gradiente elegante escuro */
+    color: white;
+}
+/* MENU */
+nav {
+    background-color: #474747; /* cor de fundo do menu */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* LINKS GERAIS */
+a {
+    color: #fcc206d8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/*  cabeçalho */
+header {
+    background-image: url('/static/imagens/logo.jpg');
+    background-color: rgba(182, 186, 183); 
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+}
+main {
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(74, 74, 74, 0.9); /* destaque com fundo escuro */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* sombra mais forte */
+    backdrop-filter: blur(2px); /* opcional: efeito "vidro esfumado" */
+    background-color: rgba(74, 74, 74, 0.9);
+    transition: background-color 0.3s ease;    
+}
+main:hover {
+  background-color: rgba(100, 100, 100, 1);
+}
+/* Título dentro do main */
+main h2 {
+  font-size: 1.8rem;       /* tamanho de fonte maior para o título */
+  text-align: center;      /* centraliza o texto */
+  margin-bottom: 20px;     /* espaço abaixo do título */
+  color: #f1f0f0;             /* cor do texto (ajuste conforme seu tema) */
+}
+
+/* Remove os marcadores padrão da lista e ajusta espaçamento */
+main ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cada item da lista (contato) */
+main ul li {
+  display: flex;                /* ícone + texto lado a lado */
+  align-items: center;          /* alinha verticalmente no centro */
+  margin-bottom: 15px;          /* espaço entre cada item */
+  font-size: 1rem;
+  color: #f5f0f0;                  /* cor do texto (ajuste se necessário) */
+  line-height: 1.4;
+}
+
+/* Estilização do ícone dentro de cada <li> */
+main ul li img {
+  width: 24px;             /* largura fixa para todos os ícones */
+  height: auto;            /* mantém proporção */
+  margin-right: 10px;      /* espaço entre ícone e texto */
+}
+
+/* Caso queira estilizar o link do LinkedIn de forma destacada */
+main ul li a {
+  color: #fcc206d8;          /* azul padrão de link (pode mudar) */
+  text-decoration: none;   /* remove sublinhado */
+  font-weight: 500;
+}
+
+main ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    position: fixed; /* Remove o efeito de fixação */
+    bottom: 0;
+    width: 100%;
+    background: rgba(228, 226, 226, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+footer p{
+
+    font-family: Roboto, sans-serif; /* Define a fonte */
+    font-size: 10px; /* Tamanho do texto */
+    font-weight: normal; /* Espessura da fonte */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    color: #f0ecec;
+}
