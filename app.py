@@ -1,7 +1,7 @@
 from flask import Flask
 import os
 
-server = Flask(__name__)
+app = Flask(__name__)
 server.secret_key = '12345678'
 
 # Aqui você pode importar suas rotas direto
