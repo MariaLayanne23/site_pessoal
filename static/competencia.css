@@ -1,0 +1,260 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Fonte moderna e sofisticada */
+    background: linear-gradient( to bottom, #1a1a1a, #4a4a4a); /* Gradiente elegante escuro */
+    color: white;
+}
+/* MENU */
+nav {
+    background-color: #474747; /* cor de fundo do menu */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* LINKS GERAIS */
+a {
+    color: #fcc206d8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*  cabeçalho */
+header {
+    background-image: url('/static/imagens/logo.jpg');
+    background-color: rgba(182, 186, 183); 
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 250px; /* começa logo após o header */
+    left: 0;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    background-color:  #b6bab79d;
+    border-right: 1px solid  #b6bab79a;
+    padding: 10px;
+    /*box-shadow: 2px 0 5px rgba(0,0,0,0.1);*/
+}
+
+/* BOTÕES DA SIDEBAR */
+.sidebar a {
+    text-decoration: none;
+    color:  #f0f0f0;
+    padding: 12px;
+    margin: 5px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    background-color: #5c5c5c;
+    border-radius: 6px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #5d6f73;
+    color: #ffffff;
+}
+/* CONTEÚDO PRINCIPAL */
+main {
+    background: transparent; /* deixa o fundo transparente para herdar do body */
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #f0ecec;
+    line-height: 1.5;
+    
+}
+main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* TEXTOS */
+
+
+h1 h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    color: #f0ecec;
+}
+h1 {
+    font-size: 24px;
+    text-align: center;
+}
+
+
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    background: transparent; /* deixa o fundo transparente para herdar do body */
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #f0ecec;
+    line-height: 1.5;
+    
+}
+main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Container de texto */
+.container-texto {
+  grid-column: span 3; /* ocupa 5 das 8 colunas */
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-texto:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+.container-texto p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #f0ecec;
+    margin: 0; /* Remove margens padrão do <p> */
+    padding: 5px 0; /* Espaçamento vertical apenas */
+    width: 100%; /* Garante que o texto use toda a largura do container */
+}
+
+.container-texto p strong {
+    color: #fcc206d8;
+}
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 8 colunas iguais */
+  grid-template-rows: auto;
+  gap: 20px;
+  width: 100%;
+  margin: 40px auto; /* centralizado na horizontal */
+}
+.container-texto {
+  grid-column: 3 / span 4; /* Começa na 3ª coluna */
+}
+
+.container-links {
+  grid-column: 6 / span 2; /* Alinha logo depois */
+}
+.container-links {
+  grid-column: span 3; /* ocupa as 3 colunas restantes */
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.container-texto:hover,
+.container-links:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+/* Rodapé */
+footer {
+    position: relative; /* Remove o efeito de fixação */
+    bottom: 0;
+    width: 100%;
+    background: rgba(228, 226, 226, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+footer p{
+
+    font-family: Roboto, sans-serif; /* Define a fonte */
+    font-size: 10px; /* Tamanho do texto */
+    font-weight: normal; /* Espessura da fonte */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    color: #f0ecec;
+}
+
+/* Tablet: 768px até 1024px */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .grid-wrapper {
+    display: block; /* desativa o grid */
+    width: 90%;
+    margin: 30px auto;
+  }
+  
+  .container-texto,
+  .container-links {
+    width: 90%;
+    margin: 20px auto;
+    grid-column: auto !important; /* remove a regra de grid-column */
+  }
+  
+  .container-texto p {
+    font-size: 15px;
+  }
+}
+
+/* Celular: até 767px */
+@media screen and (max-width: 767px) {
+  .grid-wrapper {
+    display: block; /* desativa o grid */
+    width: 95%;
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+  
+  .container-texto,
+  .container-links {
+    width: 100%;
+    margin: 15px auto;
+    grid-column: auto !important;
+  }
+  
+  .container-texto p {
+    font-size: 14px;
+  }
+  
+  /* Ajuste no rodapé para melhor leitura em telas pequenas */
+  footer p {
+    font-size: 12px;
+  }
+  
+  /* Opcional: ajustar o menu, caso precise */
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
