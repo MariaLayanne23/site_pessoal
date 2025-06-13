@@ -1,1 +1,1 @@
-web: gunicorn PROJETO.server:server
+web: gunicorn PROJETO:server
