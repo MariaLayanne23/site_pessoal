@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFÓLIO</title>
+    <link rel="stylesheet" href="static/style.css">
+    
+</head>
+<body>
+    <nav>
+            <ul><li>
+                <a href="/home">Sobre Mim</a>
+                | <a href="/competencia">Competências</a>
+                | <a href="/contato">Contate-me</a></li>
+            </ul>
+    </nav>
+    <header>    </header>
+<!--categorias do lado esquerdo -->       
+        <div class="sidebar">
+            <p>Projetos</p>
+            <a href="/residenciais"> Residenciais</a>
+            <a href="/comerciais">Comerciais</a>
+            <a href="/interiores">Interiores</a>
+            <a href="/quarto">Quartos</a>
+        </div>
+
+    <main>
+
+        <div class="grid-wrapper">
+            <div class="container-texto">
+                <h2>Sobre Mim</h2>
+            
+                <img src="{{ url_for('static', filename='imagens/karol.png') }}" alt="Foto de perfil">
+                
+                <P>Olá! Sou <strong>Ana Karolliny Rodrigues</strong>, arquiteta e urbanista com especialização em <strong>Cenografia.</strong> Minha paixão pela representação visual da arquitetura me levou a mergulhar no universo da <strong>modelagem digital,</strong> utilizando ferramentas como o Revit para criar maquetes eletrônicas detalhadas e realistas.</P>
+                
+                <p>Neste portfólio, compartilho uma seleção dos meus trabalhos — projetos que unem<strong> precisão técnica e expressividade visual</strong>, traduzindo conceitos arquitetônicos, cenográficos e urbanísticos em imagens que comunicam com clareza e sensibilidade.</p>
+
+                <p>Cada trabalho aqui representa não apenas uma solução técnica, mas também uma proposta visual pensada para transmitir a <strong>essência e o impacto de cada ideia.</strong> Seja bem-vindo(a) e sinta-se à vontade para explorar!</p>
+            </div>
+
+            <div class="carrossel">
+                
+                <div class="carrossel-texto">
+                    <p>portfólio de Ana Karolliny</p>
+                </div>
+
+                <div class="slides" >   
+                    <a href="{{ url_for('residenciais') }}">
+                        <img src="{{ url_for('static', filename='imagens/areasocial.png') }}" alt="Imagem 1" /></a>
+                    <a href="interiores">
+                        <img src="{{ url_for('static', filename='imagens/cozinha1.png') }}" alt="Imagem 2" /></a>
+                    <a href="quartos">
+                        <img src="{{ url_for('static', filename='imagens/quarto.png') }}" alt="Imagem 3" /></a>
+                    <a href="interiores"><img src="{{ url_for('static', filename='imagens/sala.png') }}" alt="Imagem 4" /></a>
+                </div>
+                
+            </div>
+        </div>
+
+    
+        
+
+    </main>
+
+    <footer>
+        <p id="paragrafo-footer">&copy; Desenvolvido por  Maria Layanne </p>
+    </footer>
+    
+</body>
+</html>
