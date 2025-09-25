@@ -1,0 +1,28 @@
+{
+  "linksRefs": [
+    {
+      "icon": "/static/imagens/json/MK27.png",
+      "label": "Studio MK27",
+      "url": "https://www.studiomk27.com.br",
+      "descricao": "O Studio MK27, fundado por Marcio Kogan, é referência na arquitetura contemporânea. Seu estilo minimalista valoriza luz natural, ventilação cruzada e materiais nobres. Os projetos integram harmoniosamente espaços internos e externos. Reconhecido mundialmente, o escritório participa de bienais e premiações."
+    },
+    {
+      "icon": "/static/imagens/json/FGMF.png",
+      "label": "FGMF Arquitetos",
+      "url": "https://fgmf.com.br",
+      "descricao": "O FGMF Arquitetos é liderado por Fernando Forte, Lourenço Gimenes e Rodrigo Ferraz. O escritório atua em diversas escalas com propostas ousadas e conceituais. Destaca-se pelo olhar experimental e uso criativo de materiais. Suas formas não convencionais desafiam padrões da arquitetura tradicional. Se quiser, posso transformar em uma bio institucional ou descrição para portfólio também!"
+    },
+    {
+      "icon": "/static/imagens/json/Revista-Projeto.png",
+      "label": "Revista Projeto",
+      "url": "https://revistaprojeto.com.br",
+      "descricao": "A Revista Projeto é uma das principais publicações de arquitetura no Brasil. Referência para profissionais e estudantes, aborda tendências e críticas de projetos. Traz entrevistas com arquitetos e cobertura de eventos do setor. É um canal relevante para difundir práticas inovadoras na arquitetura brasileira."
+    },
+    {
+      "icon": "/static/imagens/json/ArchDaily.png",
+      "label": "ArchDaily Brasil",
+      "url": "https://www.archdaily.com.br/br",
+      "descricao": "O ArchDaily Brasil é a versão nacional de uma das maiores plataformas de arquitetura. Divulga projetos brasileiros e internacionais com foco em inovação e sustentabilidade. Destaca propostas relevantes em tecnologia e práticas contemporâneas. É fonte essencial de pesquisa e inspiração para arquitetos, designers e estudantes."
+    }
+  ]
+}

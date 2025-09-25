@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO básico -->
+  <title>{{ seo.title }}</title>
+  <meta name="description" content="{{ seo.description }}">
+  <meta property="og:title" content="{{ seo.title }}">
+  <meta property="og:description" content="{{ seo.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ seo.url }}">
+  <meta property="og:image" content="{{ seo.image }}">
+  <!-- Favicon -->
+  <link rel="icon" href="{{ url_for('static', filename='imagens/favicon.ico') }}" type="image/x-icon" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='competencia.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+  <body>
+    <header>
+  <!-- Título do site -->
+   <div class="title-dropdown">
+   <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">&#9776</button> 
+     <div id="myDropdown" class="dropdown-content">
+            <p>Projetos</p>
+            <a href="/residenciais"> Residenciais</a>
+            <a href="/comerciais">Comerciais</a>
+            <a href="/interiores">Interiores</a>
+            <a href="/quarto">Quartos</a>
+        </div>
+  </div>
+  <h1><a href="/">AK Arquitetura</a></h1>
+  </div>
+  
+  
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <!-- Links principais -->
+    <div class="navbar-left">
+      <ul>
+        <li>
+          <a href="/homepage">Sobre Mim</a> |
+          <a href="/competencia">Competências</a> |
+          <a href="/contato">Contate-me</a>
+        </li>
+      </ul>
+  </div>
+</header>
+    
+<!--categorias do lado esquerdo -->       
+       
+    <main>
+        <div class="grid-wrapper">
+            <div class="container-texto">
+
+                <h1> Formação e Competências</h1>
+                <p>Conheça minhas principais habilidades técnicas e criativas adquiridas ao longo da formação e prática em Arquitetura.</p>
+
+                <h2>Formação Acadêmica</h2> 
+                <p><strong>Graduação:</strong> </p>
+                <p>Centro Universitário Cesmac – Arquitetura e Urbanismo</p>
+                <p><strong>Pós-Graduação</strong></p>
+                <p>Centro Universitário Belas Artes de São Paulo – Cenografia e Figurino</p>
+
+                <h2>Competências</h2>
+                <p><strong>Produção</strong></p>
+                <p>Desenvolvimento de projetos do conceito à execução.</p>
+                <p><strong>Revit</strong></p>
+                <p>Modelagem BIM e documentação de projetos.</p>
+                <p><strong>Cenografia</strong></p>
+                <p>Criação de espaços cênicos e experiências visuais.</p>
+                <p><strong>Imagens 3D</strong></p>
+                <p>Modelagem na plataforma BIM com realismo visual.</p>
+                <p><strong>Figurino</strong></p>
+                <p>Pesquisa e desenvolvimento de figurinos para projetos culturais e cênicos.</p>
+            </div>
+      </div>  
+            <div class="container-links"> <!-- direita fixa -->
+                
+                <h1>Inovação e Referências na Arquitetura Contemporânea Brasileira</h2>
+                <p>A arquitetura brasileira contemporânea tem se destacado por sua abordagem inovadora, que equilibra estética, funcionalidade, sustentabilidade e diálogo com o contexto urbano e natural. Escritórios e plataformas nacionais têm explorado novas formas de habitar, utilizando materiais locais, tecnologias emergentes e soluções criativas que atendem às necessidades sociais e ambientais. Essas inovações não apenas refletem um novo olhar para a arquitetura, mas também posicionam o Brasil como um polo de criação respeitado internacionalmente.</p>
+                <h2>Referências</h2>
+                
+                {% for link in linksRefs %}
+                <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+                  <img src="{{link.icon}}" alt="{{ link.label }}"><strong>{{ link.label }}</strong>
+                </a>
+                <p>{{ link.descricao | safe }}</p>
+                <hr>
+                {% endfor %}
+                
+            </div>
+        
+    </main>
+    <footer>
+        <p id="paragrafo-footer">&copy; Desenvolvido por  Maria Layanne </p>
+    </footer>
+    
+    <script>
+      // Quando o usuário clica no botão, alterna a visibilidade do dropdown
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Fecha o dropdown se o usuário clicar fora dele
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+    </script>
+</body>
+</html>

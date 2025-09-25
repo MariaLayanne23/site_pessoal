@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- SEO básico -->
+    <title>{{ seo.title }}</title>
+    <meta name="description" content="{{ seo.description }}">
+    <meta property="og:title" content="{{ seo.title }}">
+    <meta property="og:description" content="{{ seo.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ seo.url }}">
+    <meta property="og:image" content="{{ seo.image }}">
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='imagens/favicon.ico') }}" type="image/x-icon" />
+    <link rel="stylesheet" href="static/corpo.css" />
+  </head>
+  <body>
+    <header>
+  <!-- Título do site -->
+   <div class="title-dropdown">
+   <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">&#9776</button> 
+     <div id="myDropdown" class="dropdown-content">
+            <p>Projetos</p>
+            <a href="/residenciais"> Residenciais</a>
+            <a href="/comerciais">Comerciais</a>
+            <a href="/interiores">Interiores</a>
+            <a href="/quarto">Quartos</a>
+        </div>
+  </div>
+  <h1><a href="/">AK Arquitetura</a></h1>
+  </div>
+  
+    <!-- Navbar -->
+  <div class="navbar">
+    <!-- Links principais -->
+    <div class="navbar-left">
+      <ul>
+        <li>
+          <a href="/homepage">Sobre Mim</a> |
+          <a href="/competencia">Competências</a> |
+          <a href="/contato">Contate-me</a>
+        </li>
+      </ul>
+  </div>
+</header>
+
+    <main>
+      <div class="row">
+        <div class="column">
+          <img
+            src="{{ url_for('static', filename='imagens/frente1.png') }}"
+            alt="Frente - Feito para outro arquiteto."
+            onclick="expandImage(this);"
+          />
+          <p>Frente - Feito para outro arquiteto.</p>
+        </div>
+
+        <div class="column">
+          <img
+            src="{{ url_for('static', filename='imagens/areasocial.png') }}"
+            alt="Área social"
+            onclick="expandImage(this);"
+          />
+          <p>Área social</p>
+        </div>
+
+        <div class="column">
+          <img
+            src="{{ url_for('static', filename='imagens/lago.png') }}"
+            alt="Área interna - Feito para outro arquiteto."
+            onclick="expandImage(this);"
+          />
+          <p>Área interna - Feito para outro arquiteto.</p>
+        </div>
+
+        <div class="column">
+          <img
+            src="{{ url_for('static', filename='imagens/frente2.png') }}"
+            alt="Frente 2 - Feito para outro arquiteto."
+            onclick="expandImage(this);"
+          />
+          <p>Frente 2 - Feito para outro arquiteto.</p>
+        </div>
+
+        <!-- Adicione mais .column conforme necessário -->
+      </div>
+
+      <!-- Expanding image container (igual ao primeiro) -->
+      <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn"
+          >&times;</span
+        >
+        <img id="expandedImg" style="width: 100%" />
+        <div id="imgtext"></div>
+      </div>
+ <script>
+      function expandImage(img) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+
+        // Exibe a div container
+        document.querySelector(".container").style.display = "block";
+
+        // Atualiza imagem e texto
+        expandImg.src = img.src;
+        imgText.innerHTML = img.alt;
+      }
+    
+      <!-- script menu dropdown-->
+      
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+  
+        // Fecha o dropdown se o usuário clicar fora dele
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+      </script>
+    </main>
+
+    <footer>
+      <p id="paragrafo-footer">&copy; Desenvolvido por Maria Layanne</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,350 @@
+@charset "UTF-8";
+/* Importando fontes */
+@import url("https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap");
+
+/* === Variáveis globais === */
+:root {
+  --color-bg: #f8f8f8;
+  --color-primary: #c0babc;
+  --color-header: #e9ebef;
+  --color-secondary: #e0e0e0;
+  --color-link: #c1440e; /* terra-cota */
+  --color-link-hover: #a63508;
+  --font-primary: "Pridi", serif;
+  --font-secondary: "Alan Sans", sans-serif;
+  --color-fonte01: #2e2e2e;
+  --color-sidebar-fonte: #f0f0f0;
+  --color-sidebar-background: #5c5c5c;
+  --color-sidebar-hover: #5d6f73;
+}
+
+/* === Reset básico === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  font-family: var(--font-primary);
+  background: linear-gradient(to bottom, #a0522d 30%, #ffffff 30%);
+}
+
+/* === Header principal === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: var(--color-header);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  max-height: 250px;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--color-fonte01);
+}
+
+header h1 a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.title-dropdown {
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
+  gap: 10px; /* espaço entre hamburger e h1 */
+}
+/* Dropdown Button */
+.dropbtn {
+  color: var(--color-fonte01);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-header);
+  align-content: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  background-color: var(--color-header);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content p {
+  color: var(--color-fonte01);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  box-shadow: 0 1px 0 0 #2e2e2e;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: var(--color-fonte01);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--color-secondary);
+}
+
+.show {
+  display: block;
+}
+/* === Navbar/menu === */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.navbar-left ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar-left li a {
+  text-decoration: none;
+  color: var(--color-link);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-left li a:hover {
+  color: var(--color-link-hover);
+}
+
+/* === Main === */
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* === Texto === */
+p,
+.p {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  font-family: var(--font-primary);
+  font-weight: bold;
+  color: var(--color-fonte01);
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+/* === Container de texto === */
+.container-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  max-width: 800px;
+  margin: 25px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  text-align: justify;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.container-texto img {
+  padding: 20px 20px;
+  max-width: 50%;
+  align-items: center;
+}
+
+.container-texto p strong {
+  font-family: var(--font-secondary);
+  color: var(--color-link);
+}
+
+/* === Carrossel === */
+.carrossel {
+  width: 70%;
+  max-width: 800px;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 30px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carrossel-texto {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  color: var(--color-sidebar-fonte);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-family: var(--font-primary);
+  z-index: 10;
+}
+
+.slides {
+  display: flex;
+  width: auto;
+  height: 350px;
+  animation: deslizar 16s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.slides a {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@keyframes deslizar {
+  0%,
+  20% {
+    transform: translateX(0);
+  }
+  25%,
+  45% {
+    transform: translateX(-100%);
+  }
+  50%,
+  70% {
+    transform: translateX(-200%);
+  }
+  75%,
+  95% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* === Rodapé === */
+footer {
+  width: 100%;
+
+  padding: 10px;
+  text-align: center;
+  font-family: var(--font-secondary);
+  font-size: 10px;
+  color: var(--color-fonte01);
+}
+/* === Responsividade para telas médias (1024px) === */
+@media screen and (max-width: 1024px) {
+  .container-texto,
+  .carrossel {
+    width: 90%;
+    padding: 15px; /* mais confortável em telas médias */
+  }
+
+  .slides,
+  .slides a,
+  .slides img {
+    height: 300px; /* ajusta altura do carrossel */
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p,
+  .p {
+    font-size: 14px;
+  }
+
+  .container-texto img {
+    max-width: 40%; /* imagens menores para telas médias */
+  }
+}
+
+/* === Responsividade para telas pequenas (767px e menores) === */
+@media screen and (max-width: 767px) {
+  .container-texto,
+  .carrossel {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .slides,
+  .slides a,
+  .slides img {
+    height: auto;
+    max-height: 200px; /* altura menor do carrossel */
+  }
+
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  p,
+  .p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .container-texto img {
+    max-width: 120px; /* imagens bem menores */
+    margin: 0 auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  nav {
+    padding: 10px 0;
+  }
+}

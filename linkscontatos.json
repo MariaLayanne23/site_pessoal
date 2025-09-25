@@ -1,0 +1,32 @@
+{
+  "linksC": [
+    {
+      "id": 1,
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/ana-karolliny-rodrigues-02640a1a4/",
+      "icon": "fa-brands fa-linkedin",
+      "destaque": false
+    },
+    {
+      "id": 2,
+      "label": "Email",
+      "url": "mailto:anakr.arq@gmail.com?subject=Solicitação%20de%20Orçamento&body=Olá,%20gostaria%20de%20solicitar%20um%20orçamento.",
+      "icon": "fa-solid fa-envelope",
+      "destaque": true
+    },
+    {
+      "id": 3,
+      "label": "WhatsApp",
+      "url": "",
+      "icon": "fa-brands fa-whatsapp",
+      "destaque": true
+    },
+    {
+      "id": 4,
+      "label": "Portfolio",
+      "url": "",
+      "icon": "fa-solid fa-briefcase",
+      "destaque": true
+    }
+  ]
+}
