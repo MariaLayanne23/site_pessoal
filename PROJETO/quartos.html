@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO básico -->
+    <title>AK Arquitetura | quartos de Ana Karolliny Rodrigues</title>
+    <meta
+      name="description"
+      content="Veja os projetos de quartos e ambientação criados por Ana Karolliny Rodrigues."
+    />
+
+    <!-- Open Graph (para redes sociais) -->
+    <meta
+      property="og:title"
+      content="AK Arquitetura | quartos de Ana Karolliny Rodrigues"
+    />
+    <meta
+      property="og:description"
+      content="Conheça os projetos de quartos e ambientação desenvolvidos por Ana Karolliny Rodrigues, arquiteta e urbanista especializada em cenografia."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://seudominio.com/quartos.html" />
+    <meta
+      property="og:image"
+      content="https://seudominio.com/static/imagens/quartos.png"
+    />
+    <!-- Favicon -->
+    <link rel="icon" href="static/imagens/favicon.ico" type="image/x-icon" />
+    <!-- CSS do header -->
+    <link rel="stylesheet" href="static/header.css" />
+    <!-- JS que injeta o header -->
+    <script defer src="static/js/include.js"></script>
+    <!-- CSS da página -->
+    <link rel="stylesheet" href="static/corpo.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <main>
+      <div class="row">
+        <div class="column">
+          <img
+            src="static/imagens/quarto4.png"
+            alt="Quarto 1 - Feito para outro arquiteto."
+            onclick="expandImage(this);"
+          />
+          <p>Quarto 1 - Feito para outro arquiteto.</p>
+        </div>
+
+        <div class="column">
+          <img
+            src="static/imagens/quarto3.png"
+            alt="Quarto 2"
+            onclick="expandImage(this);"
+          />
+          <p>Quarto 2</p>
+        </div>
+
+        <div class="column">
+          <img
+            src="static/imagens/quarto2.png"
+            alt="Quarto 3"
+            onclick="expandImage(this);"
+          />
+          <p>Quarto 3</p>
+        </div>
+
+        <div class="column">
+          <img
+            src="static/imagens/quarto.png"
+            alt="Quarto 4"
+            onclick="expandImage(this);"
+          />
+          <p>Quarto 4</p>
+        </div>
+
+        <!-- Adicione mais .column conforme necessário -->
+      </div>
+      <!-- Expanding image container (igual ao primeiro) -->
+      <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn"
+          >&times;</span
+        >
+        <img id="expandedImg" style="width: 100%" />
+        <div id="imgtext"></div>
+      </div>
+      <script>
+        function expandImage(img) {
+          var expandImg = document.getElementById("expandedImg");
+          var imgText = document.getElementById("imgtext");
+
+          // Exibe a div container
+          document.querySelector(".container").style.display = "block";
+
+          // Atualiza imagem e texto
+          expandImg.src = img.src;
+          imgText.innerHTML = img.alt;
+        }
+      </script>
+    </main>
+
+    <footer>
+      <p id="paragrafo-footer">&copy; Desenvolvido por Maria Layanne</p>
+    </footer>
+  </body>
+</html>

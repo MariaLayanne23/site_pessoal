@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO básico -->
+    <!-- SEO básico -->
+    <title>AK Arquitetura | Comerciais</title>
+    <meta
+      name="description"
+      content="Portfólio de Ana Karolliny Rodrigues, arquiteta e urbanista especializada em cenografia."
+    />
+    <meta property="og:title" content="AK Arquitetura | Comerciais" />
+    <meta
+      property="og:description"
+      content="Veja os projetos de arquitetura e interiores de Ana Karolliny."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="static/imagens/karol.png" />
+
+    <link rel="icon" href="static/imagens/favicon.ico" type="image/x-icon" />
+    <!-- CSS do header -->
+    <link rel="stylesheet" href="static/header.css" />
+
+    <!-- CSS da página -->
+    <link rel="stylesheet" href="static/corpo.css" />
+
+    <!-- JS que injeta o header -->
+    <script defer src="static/js/include.js"></script>
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <!-- The grid: four columns -->
+    <div class="row">
+      <div class="column">
+        <img
+          src="static/imagens/bistro.png"
+          alt="Bistrô - Feito para outro arquiteto."
+          onclick="expandImage(this);"
+        />
+        <p>Bistrô - Feito para outro arquiteto.</p>
+      </div>
+
+      <div class="column">
+        <img
+          src="static/imagens/bistro2.png"
+          alt="Bitrô - vista lateral - Feito para outro arquiteto."
+          onclick="expandImage(this);"
+        />
+        <p>Bitrô - vista lateral - Feito para outro arquiteto.</p>
+      </div>
+
+      <div class="column">
+        <img
+          src="static/imagens/comercial.png"
+          alt="Milkee Açai - Feito para outro arquiteto."
+          onclick="expandImage(this);"
+        />
+        <p>Milkee Açai - Feito para outro arquiteto.</p>
+      </div>
+
+      <!-- Adicione mais .column conforme necessário -->
+    </div>
+
+    <!-- The expanding image container -->
+    <div class="container">
+      <!-- Close button -->
+      <span onclick="this.parentElement.style.display='none'" class="closebtn"
+        >&times;</span
+      >
+
+      <!-- Expanded image -->
+      <img id="expandedImg" style="width: 100%" />
+
+      <!-- Image text -->
+      <div id="imgtext"></div>
+    </div>
+    <!-- Script -->
+    <script>
+      function expandImage(img) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+
+        // Exibe a div container
+        document.querySelector(".container").style.display = "block";
+
+        // Atualiza imagem e texto
+        expandImg.src = img.src;
+        imgText.innerHTML = img.alt;
+      }
+    </script>
+
+    <footer>
+      <p id="paragrafo-footer">&copy; Desenvolvido por Maria Layanne</p>
+    </footer>
+  </body>
+</html>
