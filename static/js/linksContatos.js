@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("links");
 
-  fetch("./static/data/linkscontatos.json")
+  fetch("static/data/linkscontatos.json")
     .then((response) => {
       if (!response.ok) throw new Error("Erro ao carregar JSON");
       return response.json();
